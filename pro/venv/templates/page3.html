@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="../static/style3.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Welcome to Our Store</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="page2">Home</a></li>
+                <li><a href="/page8">Cart</a></li>
+                <li><a href="page6">About</a></li>
+                <li><a href="/page7">Contact</a></li>
+                <li><a href="page9">Profiles</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="controls">
+        <input type="text" id="searchBar" placeholder="Search for products..." />
+        <button id="sortPriceAsc">Sort by Price: Low to High</button>
+        <button id="sortPriceDesc">Sort by Price: High to Low</button>
+    </section>
+
+    <section class="product-list">
+        <h2>Our Products</h2>
+        <div id="productContainer" class="card-container">
+            {% for product in products %}
+                <div class="product-card" data-price="{{ product.price }}" data-name="{{ product.name }}">
+                    <img src="{{ url_for('static', filename='imageshoes/' + product.image) }}"
+                         alt="{{ product.name }}" class="product-image">
+                    <h3>{{ product.name }}</h3>
+                    <p>Price: ${{ product.price }}</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+    <script src="{{ url_for('static', filename='js/script3.js') }}"></script>
+
+
+ 
+</body>
+</html>

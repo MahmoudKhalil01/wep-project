@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment </title>
+    <link rel="stylesheet" href="../static/payment.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-form">
+            <div class="logo">
+                <h1>P</h1>
+            </div>
+            <h2>Payment </h2>
+            <form id="paymentForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="card_number">Card Number:</label>
+                <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9101 1121" required>
+
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" required>
+
+                <button type="button" id="payButton">Pay</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/payment.js') }}"></script>
+</body>
+</html>

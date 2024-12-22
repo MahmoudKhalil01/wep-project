@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="../static/style1.css">
+    
+    <style>
+        @media (max-width: 991px) {
+          .login_form_container {
+           width: 90%;
+          }
+          .footer{
+           width: 90%;
+          }
+        }
+     </style>
+  
+</head>
+<body>
+  
+          <header>
+              <h1> Amazon</h1>
+          </header>
+      
+          <div class="login-container">
+              <h2>Login</h2>
+              <div class="error" id="error-message"></div>
+              <input type="text" id="username" placeholder="Username" required>
+              <input type="password" id="password" placeholder="Password" required>
+              <button id="submit-button" >Log In</button>
+              <button id="signup-button"><a href="/signup"> Sign up</a> </button>
+          </div>
+      
+          <footer>
+              <p>&copy; 2024 My Store. All rights reserved.</p>
+          </footer>
+      
+    
+        
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('register') }}" method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.fname.label(class='l-fname') }}
+            {{ form.fname(class='input') }}
+            {{ form.lname.label(class='l-lname') }}
+            {{ form.lname(class='input') }}
+            {{ form.email.label(class='l-email') }}
+            {{ form.email(class='input') }}
+            {{ form.password.label(class='l-password') }}
+            {{ form.password(class='input') }}
+            {{ form.conform_password.label(class='l-conform_password') }}
+            {{ form.conform_password(class='input') }}
+            {{ form.submit(class='btn') }}
+        </form>
+    </div>
+</body>
+</html>
